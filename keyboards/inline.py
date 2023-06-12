@@ -17,3 +17,19 @@ def raqam_kb():
     kb=InlineKeyboardMarkup(row_width=3)
     kb.add(*tugmalar)
     return kb
+
+
+edit_kb=InlineKeyboardMarkup(
+    inline_keyboard=[
+        [InlineKeyboardButton(text="Xabar yuborish",callback_data="message"),
+         InlineKeyboardButton(text="O'zgartirish",callback_data="edit"),
+         InlineKeyboardButton(text="Ochirish",callback_data="delete")],
+        [InlineKeyboardButton(text="Keyingi",callback_data="next")]
+    ]
+)
+
+back_in_kb=InlineKeyboardMarkup(
+    inline_keyboard=[
+        [InlineKeyboardButton(text="Ortga",callback_data="back")]
+    ]
+)
